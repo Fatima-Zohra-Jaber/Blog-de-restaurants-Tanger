@@ -14,21 +14,22 @@
       "tel": "+212 5 39 45 78 99",
       "email": "contact@restaurantpanorama.com",
       "photo": "images/panorama.jpg"
-    },
-    {
-      "id": 2,
-      "nom": "La Fabrique",
-      "specialite": ["Burgers", "Internationale"],
-      "adresse": "Avenue Mohammed V, Tanger",
-      "notation": 4.5,
-      "avis": [
-        "Burgers excellents",
-        "Ambiance chaleureuse"
-      ],
-      "site": null,
-      "tel": "+212 6 61 45 78 89",
-      "email": "info@lafabrique.com",
-      "photo": "https://example.com/photos/lafabrique.jpg"
+    }
+    ,
+  {
+    "id": 2,
+    "nom": "La Tangerina",
+    "specialite": ["Marocaine", "Internationale"],
+    "adresse": "Rue Riad Sultan, Tanger",
+    "notation": 4.4,
+    "avis": [
+      "Hôtel-restaurant charmant",
+      "Plats savoureux"
+    ],
+    "site": "www.latangerina.com",
+    "tel": "+212 5 39 33 44 55",
+    "email": "info@latangerina.com",
+    "photo": "images/La Tangerina.jpg"
     },
     {
       "id": 3,
@@ -43,7 +44,7 @@
       "site": null,
       "tel": "+212 5 39 37 32 22",
       "email": "contact@lesaveurdupoisson.com",
-      "photo": "https://example.com/photos/saveurdupoisson.jpg"
+      "photo": "images/LeSaveurduPoisson.webp"
     },
     {
       "id": 4,
@@ -58,25 +59,10 @@
       "site": "www.latabletanger.com",
       "tel": "+212 5 39 37 18 18",
       "email": "contact@latabletanger.com",
-      "photo": "https://example.com/photos/latable.jpg"
+      "photo": "images/La-Table-du-marche.jpg"
     },
     {
       "id": 5,
-      "nom": "Domahana",
-      "specialite": ["Fruits de mer", "Méditerranéenne"],
-      "adresse": "Port de Tanger Ville, Tanger",
-      "notation": 4.5,
-      "avis": [
-        "Poisson frais et service impeccable",
-        "Vue agréable sur le port"
-      ],
-      "site": null,
-      "tel": "+212 5 39 93 23 45",
-      "email": "info@domahana.com",
-      "photo": "https://example.com/photos/domahana.jpg"
-    },
-    {
-      "id": 6,
       "nom": "Cappuccino",
       "specialite": ["Café", "Européenne"],
       "adresse": "Plage Malabata, Tanger",
@@ -88,10 +74,10 @@
       "site": "www.cappuccino.ma",
       "tel": "+212 5 39 32 15 43",
       "email": "contact@cappuccino.ma",
-      "photo": "https://example.com/photos/cappuccino.jpg"
+      "photo": "images/Cappuccino.jpg"
     },
     {
-      "id": 7,
+      "id": 6,
       "nom": "Le Nabab",
       "specialite": ["Marocaine", "Méditerranéenne"],
       "adresse": "Rue de la Kasbah, Tanger",
@@ -103,10 +89,10 @@
       "site": null,
       "tel": "+212 5 39 93 44 55",
       "email": "info@lenabab.com",
-      "photo": "https://example.com/photos/lenabab.jpg"
+      "photo": "images/Nabab.jpg"
     },
     {
-      "id": 8,
+      "id": 7,
       "nom": "Riad Tanja",
       "specialite": ["Cuisine marocaine", "Internationale"],
       "adresse": "Rue de la Marine, Tanger",
@@ -118,10 +104,10 @@
       "site": null,
       "tel": "+212 5 39 94 19 19",
       "email": "contact@riadtanja.com",
-      "photo": "https://example.com/photos/riadtanja.jpg"
+      "photo": "images/Riad Tanja.jpg"
     },
     {
-      "id": 9,
+      "id": 8,
       "nom": "Casa d’Italia",
       "specialite": ["Italienne", "Pizza"],
       "adresse": "Avenue Beethoven, Tanger",
@@ -133,10 +119,10 @@
       "site": null,
       "tel": "+212 5 39 93 88 99",
       "email": "info@casaditalia.com",
-      "photo": "https://example.com/photos/casaditalia.jpg"
+      "photo": "images/Casa d’Italia.jpg"
     },
     {
-      "id": 10,
+      "id": 9,
       "nom": "Tanjia Tanger",
       "specialite": ["Marocaine"],
       "adresse": "Rue Dar Baroud, Tanger",
@@ -148,12 +134,12 @@
       "site": null,
       "tel": "+212 5 39 93 11 77",
       "email": "contact@tanjiatanger.com",
-      "photo": "https://example.com/photos/tanjiatanger.jpg"
+      "photo": "images/Tanjia Tanger.jpg"
     },
 
  
   {
-    "id": 11,
+    "id": 10,
     "nom": "Le Mirage",
     "specialite": ["Internationale", "Méditerranéenne"],
     "adresse": "Route des Grottes d’Hercule, Tanger",
@@ -166,21 +152,6 @@
     "tel": "+212 5 39 33 45 55",
     "email": "info@lemirage.com",
     "photo": "images/Le Mirage.jpg"
-  },
-  {
-    "id": 12,
-    "nom": "La Tangerina",
-    "specialite": ["Marocaine", "Internationale"],
-    "adresse": "Rue Riad Sultan, Tanger",
-    "notation": 4.4,
-    "avis": [
-      "Hôtel-restaurant charmant",
-      "Plats savoureux"
-    ],
-    "site": "www.latangerina.com",
-    "tel": "+212 5 39 33 44 55",
-    "email": "info@latangerina.com",
-    "photo": "images/"
   }
   ]
   
