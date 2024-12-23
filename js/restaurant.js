@@ -1,5 +1,5 @@
 
-import {createStarRating} from './script.js';
+
 
 // Fonction pour récupérer les données de l'API
 async function fetchRestaurant() {
@@ -7,7 +7,7 @@ async function fetchRestaurant() {
     const nomRestaurant = urlParams.get('nom');
 
     try {
-        const response = await fetch(`http://localhost:3000/restaurants/${encodeURIComponent(nomRestaurant)}`);
+        const response = await fetch(`http://localhost:3000/restaurants/nom/${encodeURIComponent(nomRestaurant)}`);
         if (!response.ok) {
             throw new Error('Restaurant non trouvé');
         }
@@ -48,3 +48,12 @@ function detailsRestaurant(restaurant){
 
 
 fetchRestaurant(); 
+
+function createStarRating(note) {
+    const filledWidth = (note / 5) * 100; // Pourcentage d'étoiles pleines
+    return `
+        <div class="stars">
+        <div class="filled" style="width: ${filledWidth}%;">★★★★★</div>
+        </div>
+    `;
+    }

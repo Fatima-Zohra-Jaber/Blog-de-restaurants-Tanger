@@ -2,8 +2,8 @@
 async function fetchRestaurants() {
     try {
         const response = await fetch("http://localhost:3000/restaurants");
-        const restaurants = await response.json();
-        displayRestaurants(restaurants);
+        const data = await response.json();
+        displayRestaurants(data);
     } catch (error) {
         console.error("Erreur de récupération des restaurants:", error);
     }
@@ -63,20 +63,6 @@ async function addRestaurant() {
     }
 }
 
-// Fonction pour supprimer un restaurant
-async function deleteRestaurant(id) {
-    try {
-        const response = await fetch(`http://localhost:3000/restaurants/id/${id}`, {
-            method: 'DELETE'
-        });
-        
-        if (response.ok) {
-            fetchRestaurants(); // Rafraîchir la liste
-        }
-    } catch (error) {
-        console.error("Erreur de suppression de restaurant:", error);
-    }
-}
 
 // Fonction de recherche
 async function searchRestaurant() {
@@ -113,14 +99,13 @@ document.addEventListener('DOMContentLoaded', () => {
     searchButton.addEventListener('click', searchRestaurant);
 });
 
-// Fonction pour modifier un restaurant
 async function editRestaurant(id) {
-    // Récupérer le restaurant à modifier
     try {
-        const response = await fetch(`http://localhost:3000/restaurants/id/${encodeURIComponent (id)}`);
+        // Récupérer les informations du restaurant à modifier
+        const response = await fetch(`http://localhost:3000/restaurants/id/${id}`);
         const restaurant = await response.json();
 
-        // Pré-remplir le formulaire avec les données existantes
+        // Pré-remplir le formulaire avec les informations existantes
         document.getElementById('nom').value = restaurant.nom;
         document.getElementById('specialite').value = restaurant.specialite;
         document.getElementById('adresse').value = restaurant.adresse;
@@ -131,16 +116,16 @@ async function editRestaurant(id) {
         document.getElementById('photo').value = restaurant.photo;
         document.getElementById('avis').value = restaurant.avis.join(',');
 
-        // Changer le bouton d'ajout en bouton de mise à jour
+        // Modifier le bouton pour "Mettre à jour"
         const addButton = document.getElementById('add-button');
         addButton.textContent = 'Mettre à jour';
         addButton.onclick = () => updateRestaurant(id);
+
     } catch (error) {
-        console.error("Erreur de récupération du restaurant:", error);
+        console.error("Erreur lors de la récupération du restaurant:", error);
     }
 }
 
-// Fonction pour mettre à jour le restaurant
 async function updateRestaurant(id) {
     const updatedRestaurant = {
         nom: document.getElementById('nom').value,
@@ -153,6 +138,7 @@ async function updateRestaurant(id) {
         photo: document.getElementById('photo').value,
         avis: document.getElementById('avis').value.split(',')
     };
+
     try {
         const response = await fetch(`http://localhost:3000/restaurants/id/${id}`, {
             method: 'PUT',
@@ -161,19 +147,34 @@ async function updateRestaurant(id) {
             },
             body: JSON.stringify(updatedRestaurant)
         });
-        
+
         if (response.ok) {
             fetchRestaurants(); // Rafraîchir la liste
-            
-            // Réinitialiser le formulaire
+
+            // Réinitialiser le formulaire et le bouton
             document.getElementById('restaurant-form').reset();
-            
-            // Restaurer le bouton d'origine
             const addButton = document.getElementById('add-button');
             addButton.textContent = 'Ajouter Restaurant';
             addButton.onclick = addRestaurant;
         }
     } catch (error) {
-        console.error("Erreur de mise à jour du restaurant:", error);
+        console.error("Erreur lors de la mise à jour du restaurant:", error);
+    }
+}
+
+
+async function deleteRestaurant(id) {
+    try {
+        const response = await fetch(`http://localhost:3000/restaurants/${id}`, {
+            method: 'DELETE'
+        });
+
+        if (response.ok) {
+            fetchRestaurants(); // Rafraîchir la liste après suppression
+        } else {
+            console.error("Échec de la suppression du restaurant.");
+        }
+    } catch (error) {
+        console.error("Erreur lors de la suppression du restaurant:", error);
     }
 }

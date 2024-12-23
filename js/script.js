@@ -17,9 +17,18 @@ async function fetchRestaurants() {
     try {
         const response = await fetch("http://localhost:3000/restaurants"); 
         const data = await response.json(); 
+        if (data.length === 0) {
+            restaurantsElement.innerHTML = "Aucun restaurant trouvé";
+            return;
+        }
         displayRestaurants(data); 
     } catch (error) {
         console.error("Erreur lors de la récupération des restaurants :", error);
+        restaurantsElement.innerHTML = `
+            <div style="color:red; text-align:center;">
+                Erreur de chargement : ${error.message}
+                <br>Vérifiez que le serveur est actif.
+            </div>`;
     }
 }
 
@@ -51,7 +60,7 @@ function displayRestaurant(restaurant) {
 
 
 // Fonction pour créer les étoiles
-export function createStarRating(note) {
+function createStarRating(note) {
 const filledWidth = (note / 5) * 100; // Pourcentage d'étoiles pleines
 return `
     <div class="stars">
