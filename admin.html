@@ -1,22 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Administration des Restaurants</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-
+        <h1>Panneau d'Administration</h1>
     </header>
+    
     <main>
-        <aside>
-            
-        </aside>
-    </main>
-    <footer>
+        <section id="add-restaurant">
+            <h2>Ajouter un Restaurant</h2>
+            <form id="restaurant-form">
+                <input type="text" id="nom" placeholder="Nom du restaurant" >
+                <input type="text" id="specialite" placeholder="Spécialité" >
+                <input type="text" id="adresse" placeholder="Adresse" >
+                <input type="number" id="notation" placeholder="Notation" min="0" max="5">
+                <input type="text" id="tel" placeholder="Téléphone">
+                <input type="email" id="email" placeholder="Email">
+                <input type="text" id="site" placeholder="Site web">
+                <input type="text" id="photo" placeholder="URL de la photo">
+                <textarea id="avis" placeholder="Avis"></textarea>
+                <button id="add-button">Ajouter Restaurant</button>
+            </form>
+        </section>
 
-    </footer>
-    <script src="script.js"></script>
+        <section id="restaurant-list">
+            <h2>Liste des Restaurants</h2>
+            <div id="search-section">
+                <input type="text" id="search-input" placeholder="Rechercher un restaurant">
+                <button id="search-button">Rechercher</button>
+            </div>
+            <table id="restaurants-table">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Spécialité</th>
+                        <th>Notation</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="restaurants-body">
+                    <!-- Les restaurants seront ajoutés dynamiquement ici -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script  src="admin.js"></script>
 </body>
 </html>

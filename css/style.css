@@ -1,0 +1,105 @@
+:root{
+    --primary-color:#D8252F;
+    --secondary-color:#B11F27;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+#restaurants{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.restaurant{
+    width: 31%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 1%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #2c3e50;
+}
+
+img{
+    width: 100%;
+    height: 250px;
+}
+
+/* .review-container {
+    font-family: Arial, sans-serif;
+    margin: 10px 0;
+  } */
+
+  .stars {
+    display: inline-block;
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+
+  .stars::before {
+    content: "★★★★★";
+    color: #ccc; 
+    position: absolute;
+    z-index: 0;
+  }
+
+  .stars .filled {
+    color: #FFD700;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .note {
+    margin-left: 10px;
+  }
+
+  /* Styla Admin Page */
+  /* Styles spécifiques à la page admin */
+#add-restaurant, #restaurant-list {
+  margin: 20px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+}
+
+#restaurant-form {
+  display: grid;
+  gap: 10px;
+}
+
+#restaurant-form input, 
+#restaurant-form textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#restaurants-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#restaurants-table th, 
+#restaurants-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+#search-section {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
