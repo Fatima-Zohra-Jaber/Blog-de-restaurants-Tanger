@@ -5,14 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
     <header>
-        <div id="search">
-            <input type="text" id="inputName" placeholder="Nom du restaurant">
-            <button id="searchButton"> Chercher </button>
+        <div class="logo">
+           <a href="index.html"><img src="images/logo.png" alt=""></a> 
         </div>
-        
+        <div id="search">
+            <select name="type" id="type">
+                <option value="">Select</option>
+                <option value="nom">Nom</option>
+                <option value="specielite">Spécialité</option>
+            </select>
+            <input type="text" id="inputName" placeholder="Nom du restaurant">
+            <button id="searchButton"> <i class="fa-solid fa-magnifying-glass"></i> </button>
+            <button onclick="window.location.href='admin.html'"><i class="fa-solid fa-bars"></i></button>
+        </div>
     </header>
     <main>
         <section id="restaurants">

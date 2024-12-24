@@ -1,0 +1,113 @@
+/* Style pour la page de détails */
+.restaurantDetail {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: 100vh;
+    background: #fff;
+}
+
+/* Style pour l'image */
+.imageDetail {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.imageDetail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imageDetail::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 1));
+}
+
+.textDetail {
+    width: 90%;
+    max-width: 800px; /* Limiter la largeur pour un meilleur rendu */
+    margin: -100px auto 50px;
+    padding: 40px;
+    background: white;
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ajout d'une transition */
+}
+
+.textDetail:hover {
+    transform: translateY(-5px); /* Effet de survol */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
+}
+
+.textDetail h1 {
+    font-size: 2.5rem; /* Taille de police plus grande */
+    color: var(--primary-color); /* Utiliser une couleur primaire */
+    margin-bottom: 20px;
+    font-weight: 700; /* Poids de police plus audacieux */
+}
+
+.textDetail p {
+    margin: 15px 0; /* Espacement uniforme entre les paragraphes */
+    line-height: 1.6; /* Meilleure lisibilité */
+    color: var(--second-text); /* Couleur secondaire pour le texte */
+}
+
+.specialite-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.specialite-container span {
+    color: var(--primary-text);
+}
+
+.specialite {
+    display: inline-block;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    padding: 5px 15px;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    text-transform: capitalize;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    cursor: default;
+}
+
+/* Avis */
+.avis {
+    font-style: italic;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.avis::before {
+    content: "“";
+    font-size: 3rem;
+    color: var(--primary-color)
+}
+
+.avis::after {
+    content: "”";
+    font-size: 3rem;
+    color: var(--primary-color)
+}
+i{
+    margin-right: 10px;
+    color: var(--primary-color);
+}

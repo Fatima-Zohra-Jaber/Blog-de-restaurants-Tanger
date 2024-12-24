@@ -5,10 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administration des Restaurants</title>
     <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Panneau d'Administration</h1>
+        <div class="logo">
+           <a href="index.html"><img src="images/logo.png" alt=""></a> 
+        </div>
+        <div id="search">
+            <select name="type" id="type">
+                <option value="">Select</option>
+                <option value="nom">Nom</option>
+                <option value="specielite">Spécialité</option>
+            </select>
+            <input type="text" id="inputName" placeholder="Nom du restaurant">
+            <button id="searchButton"> <i class="fa-solid fa-magnifying-glass"></i> </button>
+            <button onclick="window.location.href='admin.html'"><i class="fa-solid fa-bars"></i></button>
+        </div>
     </header>
     
     <main>
@@ -30,10 +44,6 @@
 
         <section id="restaurant-list">
             <h2>Liste des Restaurants</h2>
-            <div id="search-section">
-                <input type="text" id="search-input" placeholder="Rechercher un restaurant">
-                <button id="search-button">Rechercher</button>
-            </div>
             <table id="restaurants-table">
                 <thead>
                     <tr>

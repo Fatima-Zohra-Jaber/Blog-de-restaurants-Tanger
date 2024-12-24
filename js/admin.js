@@ -24,8 +24,9 @@ function displayRestaurants(restaurants) {
             <td>${restaurant.specialite}</td>
             <td>${restaurant.notation}</td>
             <td>
-                <button onclick="editRestaurant(${restaurant.id})">Modifier</button>
-                <button onclick="deleteRestaurant(${restaurant.id})">Supprimer</button>
+                <button onclick="window.location.href='restaurant.html?id=${restaurant.id}'"><i class="fa-regular fa-eye"></i></button>
+                <button onclick="editRestaurant(${restaurant.id})"><i class="fa-solid fa-pencil"></i></button>
+                <button onclick="deleteRestaurant(${restaurant.id})"><i class="fa-solid fa-trash"></i></button>
             </td>
         `;
         tableBody.appendChild(row);

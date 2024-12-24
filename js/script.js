@@ -45,13 +45,13 @@ function displayRestaurant(restaurant) {
     restaurantElement.className='restaurant';
     restaurantElement.innerHTML = `
         <img src="${restaurant.photo}" alt="${restaurant.nom}" >
-        <h2>${restaurant.nom}</h2>
+        <h3>${restaurant.nom}</h3>
         <p>${restaurant.specialite}</p>
         <div class="review-container">
             ${createStarRating(restaurant.notation)}
-            <span class="note">${restaurant.notation}</span>
+            <span class="note">(${restaurant.notation})</span>
         </div>
-        <button onclick="window.location.href='restaurant.html?nom=${encodeURIComponent(restaurant.nom)}'">
+        <button onclick="window.location.href='restaurant.html?id=${restaurant.id}'">
             Détails</button>
         
     `;

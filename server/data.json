@@ -36,24 +36,6 @@
     "photo": "images/Cappuccino.jpg"
   },
   {
-    "id": 6,
-    "nom": "Le Nabab",
-    "specialite": [
-      "Marocaine",
-      "Méditerranéenne"
-    ],
-    "adresse": "Rue de la Kasbah, Tanger",
-    "notation": 4.3,
-    "avis": [
-      "Cuisine marocaine raffinée",
-      "Service excellent"
-    ],
-    "site": null,
-    "tel": "+212 5 39 93 44 55",
-    "email": "info@lenabab.com",
-    "photo": "images/Nabab.jpg"
-  },
-  {
     "id": 7,
     "nom": "Riad Tanja",
     "specialite": [
@@ -88,5 +70,34 @@
     "tel": "+212 5 39 93 88 99",
     "email": "info@casaditalia.com",
     "photo": "images/Casa d’Italia.jpg"
+  },
+  {
+    "id": 7,
+    "nom": "Le Nabab",
+    "specialite": "Marocaine,Méditerranéenne",
+    "adresse": "Rue de la Kasbah, Tanger",
+    "notation": 3.3,
+    "avis": [
+      "Cuisine marocaine raffinée",
+      "Service excellent"
+    ],
+    "site": "",
+    "tel": "+212 5 39 93 44 55",
+    "photo": "images/Nabab.jpg"
+  },
+  {
+    "id": 6,
+    "nom": "Le Saveur du Poisson",
+    "specialite": "Fruits de mer,Marocaine",
+    "adresse": "Rue Ibn Rochd, Tanger",
+    "notation": 4.5,
+    "avis": [
+      "Expérience unique",
+      " tout est fait maison",
+      "Plats simples mais délicieux"
+    ],
+    "site": "",
+    "tel": "+212 5 39 37 32 22",
+    "photo": "images/LeSaveurduPoisson.webp"
   }
 ]

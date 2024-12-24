@@ -4,10 +4,10 @@
 // Fonction pour récupérer les données de l'API
 async function fetchRestaurant() {
     const urlParams = new URLSearchParams(window.location.search);
-    const nomRestaurant = urlParams.get('nom');
+    const idRestaurant = urlParams.get('id');
 
     try {
-        const response = await fetch(`http://localhost:3000/restaurants/nom/${encodeURIComponent(nomRestaurant)}`);
+        const response = await fetch(`http://localhost:3000/restaurants/id/${idRestaurant}`);
         if (!response.ok) {
             throw new Error('Restaurant non trouvé');
         }
@@ -31,16 +31,19 @@ function detailsRestaurant(restaurant){
                
             <div class="textDetail">
                 <h1>${restaurant.nom}</h1>
-                <p><span>Spécialiste: </span>${restaurant.specialite}</p>
+                <p class="specialite-container">
+    <span>Spécialité: </span>
+    ${restaurant.specialite.map(s => `<span class="specialite">${s.trim()}</span>`).join('')}
+</p>
+
                 <div class="review-container">
-                                <span>Notation:</span>
-                                ${createStarRating(restaurant.notation)}
-                                <span class="note">${restaurant.notation}</span>
-                            </div>
-                <p><span>Avis: </span>${restaurant.avis}</p>
-                <p><span>Adresse: </span>${restaurant.adresse}</p>
-                <p><span>Tel: </span>${restaurant.tel}</p>
-                <p><span>E-mail: </span>${restaurant.email}</p>
+                    ${createStarRating(restaurant.notation)}
+                    <span class="note">(${restaurant.notation})</span>
+                </div>
+                <p class="avis">${restaurant.avis}</p>
+                <p><i class="fa-solid fa-location-dot"></i> ${restaurant.adresse}</p>
+                <p><i class="fa-solid fa-phone"></i> ${restaurant.tel}</p>
+                <p><i class="fa-regular fa-envelope"></i> ${restaurant.email}</p>
                 <p><span>Site web: </span>${restaurant.site}</p>
             </div>`;
     main.appendChild(restaurantDetail);

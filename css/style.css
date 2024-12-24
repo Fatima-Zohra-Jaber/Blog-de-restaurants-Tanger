@@ -1,105 +1,168 @@
 :root{
-    --primary-color:#D8252F;
-    --secondary-color:#B11F27;
+    --primary-text:#333;
+    --second-text:#666;
+    --primary-color:#ff6b35;
+    --hover-color:#ff4f0a;
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+/* Style général */
 body {
-    font-family: Arial, sans-serif;
-}
-
-#restaurants{
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-}
-.restaurant{
-    width: 31%;
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin: 10px 1%;
-    border-radius: 5px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    color: #2c3e50;
-}
-
-img{
-    width: 100%;
-    height: 250px;
-}
-
-/* .review-container {
-    font-family: Arial, sans-serif;
-    margin: 10px 0;
-  } */
-
-  .stars {
-    display: inline-block;
-    font-size: 24px;
-    letter-spacing: 2px;
-  }
-
-  .stars::before {
-    content: "★★★★★";
-    color: #ccc; 
-    position: absolute;
-    z-index: 0;
-  }
-
-  .stars .filled {
-    color: #FFD700;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-
-  .note {
-    margin-left: 10px;
-  }
-
-  /* Styla Admin Page */
-  /* Styles spécifiques à la page admin */
-#add-restaurant, #restaurant-list {
-  margin: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
   padding: 20px;
-  background-color: #f4f4f4;
-  border-radius: 8px;
+  background-color: #f5f5f5;
 }
 
-#restaurant-form {
-  display: grid;
-  gap: 10px;
-}
-
-#restaurant-form input, 
-#restaurant-form textarea {
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-#restaurants-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-#restaurants-table th, 
-#restaurants-table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-}
-
-#search-section {
-  margin-bottom: 20px;
+/* Header et barre de recherche */
+header {
+  margin-bottom: 30px;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.logo img{
+  width: 100px;
+}
+#search {
+  display: flex;
+  justify-content: center;
   gap: 10px;
+  margin: 20px 0;
 }
 
+#inputName,select {
+  padding: 12px 20px;
+  border: 1px solid #ddd;
+  color: var(--second-text);
+  border-radius: 25px;
+  width: 300px;
+  font-size: 16px;
+}
+
+#inputName:focus, select:focus {
+  outline: none;
+  border: 1px solid var(--primary-color);
+}
+header Button {
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+header Button:hover {
+  background-color: var(--hover-color);
+}
+
+/* Section restaurants */
+#restaurants {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+  justify-content: center;
+}
+
+/* Carte restaurant */
+.restaurant {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.restaurant:hover {
+  transform: translateY(-5px);
+}
+
+.restaurant img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.restaurant h3 {
+  margin: 15px 20px;
+  color: var(--primary-text);
+  font-size: 1.5rem;
+}
+
+.restaurant p {
+  margin: 0 20px 15px;
+  color: var(--second-text);
+}
+
+/*  La notation */
+.review-container {
+  margin: 0 20px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.stars {
+  display: inline-block;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+.stars::before {
+  content: "★★★★★";
+  color: #ccc; 
+  position: absolute;
+  z-index: 0;
+}
+
+.stars .filled {
+  color: #FFD700;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.note {
+  margin-left: 10px;
+  color: var(--primary-color);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* Bouton détails */
+.restaurant button {
+  display: block;
+  width: calc(100% - 40px);
+  margin: 0 20px 20px;
+  padding: 12px 0;
+  background-color: #ff6b35;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.restaurant button:hover {
+  background-color: #ff4f0a;
+}
+
+/* Message d'erreur */
+[style*="color:red"] {
+  padding: 20px;
+  background-color: #fee2e2;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 600px;
+}
