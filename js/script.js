@@ -18,7 +18,7 @@ async function fetchRestaurants() {
         const response = await fetch("http://localhost:3000/restaurants"); 
         const data = await response.json(); 
         if (data.length === 0) {
-            restaurantsElement.innerHTML = "Aucun restaurant trouvé";
+            restaurantsElement.innerHTML ='<div class="notFound">Aucun restaurant trouvé</div>';
             return;
         }
         displayRestaurants(data); 
@@ -70,10 +70,19 @@ return `
 }
 
  async function searchRestaurant(){
-    const nomRestaurant = document.getElementById("inputName").value;
+    const typeSearch = document.getElementById("typeSearch").value;
+    const input = document.getElementById("input").value;
+    let url;
+    if(typeSearch==="nom"){
+        url= `http://localhost:3000/restaurants/nom/${encodeURIComponent(input)}`;
+    }else if(typeSearch==="specielite"){
+        url= `http://localhost:3000/restaurants/specielite/${encodeURIComponent(input)}`;
+    }else{
+        restaurantsElement.innerHTML = "<p>Veuillez choisir un type de recherche</p>";
+    }
     
     try {
-        const response = await fetch(`http://localhost:3000/restaurants/nom/${encodeURIComponent(nomRestaurant)}`);
+        const response = await fetch(url);
         if (!response.ok) {
             // throw new Error('Restaurant non trouvé');
             restaurantsElement.innerHTML = "<p>Restaurant non trouvé</p>";

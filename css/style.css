@@ -34,7 +34,7 @@ header {
   margin: 20px 0;
 }
 
-#inputName,select {
+#input,select {
   padding: 12px 20px;
   border: 1px solid #ddd;
   color: var(--second-text);
@@ -43,7 +43,7 @@ header {
   font-size: 16px;
 }
 
-#inputName:focus, select:focus {
+#input:focus, select:focus {
   outline: none;
   border: 1px solid var(--primary-color);
 }
@@ -157,7 +157,10 @@ header Button:hover {
 .restaurant button:hover {
   background-color: #ff4f0a;
 }
-
+.notFound{
+  background-color: #FFF3CD;
+  color: #A89452;
+}
 /* Message d'erreur */
 [style*="color:red"] {
   padding: 20px;

@@ -39,13 +39,27 @@ app.get('/restaurants/id/:id', (req, res) => {
     if (!restaurant) return res.status(404).send('Restaurant non trouvé');
     res.json(restaurant);
 });
+
 // Récupérer un restaurant par nom
 app.get('/restaurants/nom/:nom', (req, res) => {
     const restaurant = restaurants.find(r => r.nom.toLowerCase() === req.params.nom.toLowerCase());
     if (!restaurant) return res.status(404).send('Restaurant non trouvé');
     if (response.status === 404) {
         const tableBody = document.getElementById('restaurants-body');
-        tableBody.innerHTML = '<tr><td colspan="4">Aucun restaurant trouvé</td></tr>';
+        tableBody.innerHTML = '<div class="notFound">Aucun restaurant trouvé</div>';
+        return;
+    }
+    
+    res.json(restaurant);
+});
+
+// Récupérer un restaurant par spécialité
+app.get('/restaurants/specialite/:specialite', (req, res) => {
+    const restaurant = restaurants.find(r => r.specialite.toLowerCase() === req.params.specialite.toLowerCase());
+    if (!restaurant) return res.status(404).send('Restaurant non trouvé');
+    if (response.status === 404) {
+        const tableBody = document.getElementById('restaurants-body');
+        tableBody.innerHTML = '<div class="notFound">Aucun restaurant trouvé</div>';
         return;
     }
     
