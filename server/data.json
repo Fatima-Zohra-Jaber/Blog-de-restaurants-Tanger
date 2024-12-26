@@ -1,29 +1,72 @@
 [
   {
-    "id": 3,
-    "nom": "Le Saveur du Poisson",
-    "specialite": [
-      "Fruits de mer",
-      "Marocaine"
-    ],
-    "adresse": "Rue Ibn Rochd, Tanger",
-    "notation": 4.8,
+  "id": 1,
+  "nom": "Le Mirage",
+  "specialite": ["Internationale", "Méditerranéenne"],
+  "adresse": "Route des Grottes d’Hercule, Tanger",
+  "notation": 4.8,
+  "avis": [
+    "Cadre magnifique",
+    "Cuisine exceptionnelle"
+  ],
+  "site": "www.lemirage.com",
+  "tel": "+212 5 39 33 45 55",
+  "email": "info@lemirage.com",
+  "photo": "images/Le Mirage.jpg"
+},
+  {
+    "id": 2,
+    "nom": "Tanjia Tanger",
+    "specialite": ["Marocaine"],
+    "adresse": "Rue Dar Baroud, Tanger",
+    "notation": 4.4,
     "avis": [
-      "Expérience unique, tout est fait maison",
-      "Plats simples mais délicieux"
+      "Excellents tajines",
+      "Décor traditionnel et charmant"
     ],
     "site": null,
-    "tel": "+212 5 39 37 32 22",
-    "email": "contact@lesaveurdupoisson.com",
-    "photo": "images/LeSaveurduPoisson.webp"
+    "tel": "+212 5 39 93 11 77",
+    "email": "contact@tanjiatanger.com",
+    "photo": "images/Tanjia Tanger.jpg"
+  },
+
+
+
+  {
+    "id": 3,
+    "nom": "Restaurant Panorama",
+    "specialite": ["Internationale"],
+    "adresse": "Corniche Malabata, Tanger",
+    "notation": 4.5,
+    "avis": [
+      "Vue splendide sur la mer",
+      "Service de qualité",
+      "Un peu cher mais ça vaut le coup"
+    ],
+    "site": "www.restaurantpanorama.com",
+    "tel": "+212 5 39 45 78 99",
+    "email": "contact@restaurantpanorama.com",
+    "photo": "images/panorama.jpg"
+  },
+  {
+    "id": 4,
+    "nom": "La Table du Marché",
+    "specialite": ["Francaise", "Européenne"],
+    "adresse": "Place de France, Tanger",
+    "notation": 4.0,
+    "avis": [
+      "Délicieux desserts",
+      "Un peu cher, mais de qualité"
+    ],
+    "site": "www.latabletanger.com",
+    "tel": "+212 5 39 37 18 18",
+    "email": "contact@latabletanger.com",
+    "photo": "images/La-Table-du-marche.jpg"
   },
   {
     "id": 5,
     "nom": "Cappuccino",
-    "specialite": [
-      "Café",
-      "Européenne"
-    ],
+    "specialite": ["Café", "Européenne"],
     "adresse": "Plage Malabata, Tanger",
     "notation": 4.2,
     "avis": [
@@ -36,12 +79,24 @@
     "photo": "images/Cappuccino.jpg"
   },
   {
+    "id": 6,
+    "nom": "Le Nabab",
+    "specialite": ["Marocaine", "Méditerranéenne"],
+    "adresse": "Rue de la Kasbah, Tanger",
+    "notation": 4.3,
+    "avis": [
+      "Cuisine marocaine raffinée",
+      "Service excellent"
+    ],
+    "site": null,
+    "tel": "+212 5 39 93 44 55",
+    "email": "info@lenabab.com",
+    "photo": "images/Nabab.jpg"
+  },
+  {
     "id": 7,
     "nom": "Riad Tanja",
-    "specialite": [
-      "Cuisine marocaine",
-      "Internationale"
-    ],
+    "specialite": ["Cuisine marocaine", "Internationale"],
     "adresse": "Rue de la Marine, Tanger",
     "notation": 4.6,
     "avis": [
@@ -56,10 +111,7 @@
   {
     "id": 8,
     "nom": "Casa d’Italia",
-    "specialite": [
-      "Italienne",
-      "Pizza"
-    ],
+    "specialite": ["Italienne", "Pizza"],
     "adresse": "Avenue Beethoven, Tanger",
     "notation": 4.7,
     "avis": [
@@ -72,32 +124,34 @@
     "photo": "images/Casa d’Italia.jpg"
   },
   {
-    "id": 7,
-    "nom": "Le Nabab",
-    "specialite": "Marocaine,Méditerranéenne",
-    "adresse": "Rue de la Kasbah, Tanger",
-    "notation": 3.3,
+    "id": 9,
+    "nom": "La Tangerina",
+    "specialite": ["Marocaine", "Internationale"],
+    "adresse": "Rue Riad Sultan, Tanger",
+    "notation": 4.4,
     "avis": [
-      "Cuisine marocaine raffinée",
-      "Service excellent"
+      "Hôtel-restaurant charmant",
+      "Plats savoureux"
     ],
-    "site": "",
-    "tel": "+212 5 39 93 44 55",
-    "photo": "images/Nabab.jpg"
-  },
-  {
-    "id": 6,
-    "nom": "Le Saveur du Poisson",
-    "specialite": "Fruits de mer,Marocaine",
-    "adresse": "Rue Ibn Rochd, Tanger",
-    "notation": 4.5,
-    "avis": [
-      "Expérience unique",
-      " tout est fait maison",
-      "Plats simples mais délicieux"
-    ],
-    "site": "",
-    "tel": "+212 5 39 37 32 22",
-    "photo": "images/LeSaveurduPoisson.webp"
-  }
+    "site": "www.latangerina.com",
+    "tel": "+212 5 39 33 44 55",
+    "email": "info@latangerina.com",
+    "photo": "images/La Tangerina.jpg"
+    },
+    {
+      "id": 10,
+      "nom": "Le Saveur du Poisson",
+      "specialite": ["Fruits de mer", "Marocaine"],
+      "adresse": "Rue Ibn Rochd, Tanger",
+      "notation": 4.8,
+      "avis": [
+        "Expérience unique, tout est fait maison",
+        "Plats simples mais délicieux"
+      ],
+      "site": null,
+      "tel": "+212 5 39 37 32 22",
+      "email": "contact@lesaveurdupoisson.com",
+      "photo": "images/LeSaveurduPoisson.webp"
+    }
+
 ]

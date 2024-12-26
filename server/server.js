@@ -42,28 +42,27 @@ app.get('/restaurants/id/:id', (req, res) => {
 
 // Récupérer un restaurant par nom
 app.get('/restaurants/nom/:nom', (req, res) => {
-    const restaurant = restaurants.find(r => r.nom.toLowerCase() === req.params.nom.toLowerCase());
-    if (!restaurant) return res.status(404).send('Restaurant non trouvé');
-    if (response.status === 404) {
-        const tableBody = document.getElementById('restaurants-body');
-        tableBody.innerHTML = '<div class="notFound">Aucun restaurant trouvé</div>';
-        return;
+    const result = restaurants.filter(r =>
+ r.nom.toLowerCase().includes(req.params.nom.toLowerCase()));
+    if (result.length === 0) {
+        return res.status(404).send('Aucun restaurant trouvé avec ce nom.');
     }
-    
-    res.json(restaurant);
+    res.json(result);
 });
+
 
 // Récupérer un restaurant par spécialité
 app.get('/restaurants/specialite/:specialite', (req, res) => {
-    const restaurant = restaurants.find(r => r.specialite.toLowerCase() === req.params.specialite.toLowerCase());
-    if (!restaurant) return res.status(404).send('Restaurant non trouvé');
-    if (response.status === 404) {
-        const tableBody = document.getElementById('restaurants-body');
-        tableBody.innerHTML = '<div class="notFound">Aucun restaurant trouvé</div>';
-        return;
+    const result = restaurants.filter(restaurant => 
+        restaurant.specialite.some(spec => 
+            spec.toLowerCase().includes(req.params.specialite.toLowerCase())
+        )
+    );
+
+    if (result.length === 0) {
+        return res.status(404).send('Aucun restaurant trouvé avec cette spécialité.');
     }
-    
-    res.json(restaurant);
+    res.json(result);
 });
 // // Ajouter un restaurant
 app.post('/restaurants', (req, res) => {

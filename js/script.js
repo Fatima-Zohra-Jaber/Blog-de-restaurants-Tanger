@@ -21,7 +21,8 @@ async function fetchRestaurants() {
             restaurantsElement.innerHTML ='<div class="notFound">Aucun restaurant trouvé</div>';
             return;
         }
-        displayRestaurants(data); 
+        const sotredRestaurants = data.sort((a,b) => b.notation - a.notation);
+        displayRestaurants(sotredRestaurants); 
     } catch (error) {
         console.error("Erreur lors de la récupération des restaurants :", error);
         restaurantsElement.innerHTML = `
@@ -73,27 +74,41 @@ return `
     const typeSearch = document.getElementById("typeSearch").value;
     const input = document.getElementById("input").value;
     let url;
-    if(typeSearch==="nom"){
-        url= `http://localhost:3000/restaurants/nom/${encodeURIComponent(input)}`;
-    }else if(typeSearch==="specielite"){
-        url= `http://localhost:3000/restaurants/specielite/${encodeURIComponent(input)}`;
-    }else{
-        restaurantsElement.innerHTML = "<p>Veuillez choisir un type de recherche</p>";
+    if (!typeSearch) {
+        restaurantsElement.innerHTML = "<p class='notFound'>Veuillez choisir un type de recherche</p>";
+        return;
     }
-    
+
+    if (!input.trim()) {
+        restaurantsElement.innerHTML = "<p class='notFound'>Veuillez saisir un terme de recherche</p>";
+        return;
+    }
+    if (typeSearch === "nom") {
+        url = `http://localhost:3000/restaurants/nom/${encodeURIComponent(input)}`;
+    }else if(typeSearch === "specialite"){
+        url= `http://localhost:3000/restaurants/specialite/${encodeURIComponent(input)}`;
+    }
     try {
         const response = await fetch(url);
         if (!response.ok) {
-            // throw new Error('Restaurant non trouvé');
-            restaurantsElement.innerHTML = "<p>Restaurant non trouvé</p>";
+            // Gestion des codes d'erreur spécifiques
+            if (response.status === 404) {
+                restaurantsElement.innerHTML = "<p class='notFound'>Aucun restaurant trouvé correspondant à votre recherche</p>";
+            } else {
+                restaurantsElement.innerHTML = `<p class='notFound'>Erreur du serveur : ${response.statusText}</p>`;
+            }
             return;
         }
-        const restaurant = await response.json();
-        restaurantsElement.innerHTML = '';
-            displayRestaurant(restaurant);
-        } catch (error) {
-        console.error("Erreur lors de la récupération des détails du restaurant :", error);
-        restaurantsElement.innerHTML = "<p>Erreur de recherche</p>";
+    
+        const restaurants = await response.json();
+        restaurantsElement.innerHTML = ''; // Efface les résultats précédents
+        displayRestaurants(restaurants);
+    
+    } catch (error) {
+        console.error("Erreur lors de la recherche :", error);
+        restaurantsElement.innerHTML = "<p class='notFound'>Erreur de recherche. Vérifiez votre connexion ou réessayez plus tard.</p>";
     }
+    
+
 
 }
