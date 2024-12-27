@@ -21,8 +21,8 @@ async function fetchRestaurants() {
             restaurantsElement.innerHTML ='<div class="notFound">Aucun restaurant trouvé</div>';
             return;
         }
-        const sotredRestaurants = data.sort((a,b) => b.notation - a.notation);
-        displayRestaurants(sotredRestaurants); 
+        const sortRestaurants = data.sort((a,b) => b.notation - a.notation);
+        displayRestaurants(sortRestaurants); 
     } catch (error) {
         console.error("Erreur lors de la récupération des restaurants :", error);
         restaurantsElement.innerHTML = `
@@ -78,9 +78,8 @@ return `
         restaurantsElement.innerHTML = "<p class='notFound'>Veuillez choisir un type de recherche</p>";
         return;
     }
-
     if (!input.trim()) {
-        restaurantsElement.innerHTML = "<p class='notFound'>Veuillez saisir un terme de recherche</p>";
+        restaurantsElement.innerHTML = "<p class='notFound'>Veuillez saisir une valeur de recherche</p>";
         return;
     }
     if (typeSearch === "nom") {
@@ -91,7 +90,6 @@ return `
     try {
         const response = await fetch(url);
         if (!response.ok) {
-            // Gestion des codes d'erreur spécifiques
             if (response.status === 404) {
                 restaurantsElement.innerHTML = "<p class='notFound'>Aucun restaurant trouvé correspondant à votre recherche</p>";
             } else {
@@ -101,7 +99,7 @@ return `
         }
     
         const restaurants = await response.json();
-        restaurantsElement.innerHTML = ''; // Efface les résultats précédents
+        restaurantsElement.innerHTML = ''; 
         displayRestaurants(restaurants);
     
     } catch (error) {

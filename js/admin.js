@@ -8,25 +8,67 @@ async function fetchRestaurants() {
         console.error("Erreur de récupération des restaurants:", error);
     }
 }
+const tableBody = document.getElementById('restaurants-body');
+
+async function searchRestaurant(){
+    const typeSearch = document.getElementById("typeSearch").value;
+    const input = document.getElementById("input").value;
+    let url;
+    if (!typeSearch) {
+        tableBody.innerHTML = "<tr><td colspan='5' class='notFound'>Veuillez choisir un type de recherche</td></tr>";
+        return;
+    }
+    if (!input.trim()) {
+        tableBody.innerHTML = "<tr><td colspan='5' class='notFound'>Veuillez saisir une valeur de recherche</td></tr>";
+        return;
+    }
+    if (typeSearch === "nom") {
+        url = `http://localhost:3000/restaurants/nom/${encodeURIComponent(input)}`;
+    }else if(typeSearch === "specialite"){
+        url= `http://localhost:3000/restaurants/specialite/${encodeURIComponent(input)}`;
+    }
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            if (response.status === 404) {
+                tableBody.innerHTML = "<tr><td colspan='5' class='notFound'>Aucun restaurant trouvé correspondant à votre recherche</td></tr>";
+            } else {
+                tableBody.innerHTML = `<tr><td colspan='5' class='notFound'>Erreur du serveur : ${response.statusText}</td></tr>`;
+            }
+            return;
+        }
+    
+        const restaurants = await response.json();
+        tableBody.innerHTML = '';
+        displayRestaurants(restaurants);
+    
+    } catch (error) {
+        console.error("Erreur lors de la recherche :", error);
+        tableBody.innerHTML = "<tr><td colspan='5' class='notFound'> Erreur de recherche. Vérifiez votre connexion ou réessayez plus tard.</td></tr>";
+    }
+    
+
+
+}
 
 // Fonction pour afficher les restaurants dans le tableau
 function displayRestaurants(restaurants) {
-    const tableBody = document.getElementById('restaurants-body');
     tableBody.innerHTML = ''; 
 
     restaurants.forEach(restaurant => {
         const row = document.createElement('tr');
         row.innerHTML = `
-            <td>
-                <img src="${restaurant.photo}" alt="${restaurant.nom}" >
-            </td>
+            <td><img src="${restaurant.photo}" alt="${restaurant.nom}" ></td>
             <td>${restaurant.nom}</td>
             <td>${restaurant.specialite}</td>
             <td>${restaurant.notation}</td>
             <td>
-                <button onclick="window.location.href='restaurant.html?id=${restaurant.id}'"><i class="fa-regular fa-eye"></i></button>
-                <button onclick="editRestaurant(${restaurant.id})"><i class="fa-solid fa-pencil"></i></button>
-                <button onclick="deleteRestaurant(${restaurant.id})"><i class="fa-solid fa-trash"></i></button>
+                <button onclick="window.location.href='restaurant.html?id=${restaurant.id}'">
+                <i class="fa-regular fa-eye"></i></button>
+                <button onclick="editRestaurant(${restaurant.id})">
+                <i class="fa-solid fa-pencil"></i></button>
+                <button onclick="deleteRestaurant(${restaurant.id})">
+                <i class="fa-solid fa-trash"></i></button>
             </td>
         `;
         tableBody.appendChild(row);
@@ -37,7 +79,7 @@ function displayRestaurants(restaurants) {
 async function addRestaurant() {
     const newRestaurant = {
         nom: document.getElementById('nom').value,
-        specialite: document.getElementById('specialite').value,
+        specialite: document.getElementById('specialite').value.split(','),
         adresse: document.getElementById('adresse').value,
         notation: parseFloat(document.getElementById('notation').value),
         tel: document.getElementById('tel').value,
@@ -57,35 +99,10 @@ async function addRestaurant() {
         });
         
         if (response.ok) {
-            fetchRestaurants(); // Rafraîchir la liste
+            fetchRestaurants();
         }
     } catch (error) {
         console.error("Erreur d'ajout de restaurant:", error);
-    }
-}
-
-
-// Fonction de recherche
-async function searchRestaurant() {
-    const searchTerm = document.getElementById('search-input').value;
-    
-    try {
-        const response = await fetch(`http://localhost:3000/restaurants/nom/${encodeURIComponent(searchTerm)}`);
-        if (!response.ok) {
-            // Gérez le cas où le restaurant n'est pas trouvé
-            const tableBody = document.getElementById('restaurants-body');
-            tableBody.innerHTML = '<tr><td colspan="4">Aucun restaurant trouvé</td></tr>';
-            return;
-        }
-        const restaurant = await response.json();
-        
-        if (restaurant) {
-            displayRestaurants([restaurant]);
-        }
-    } catch (error) {
-        console.error("Erreur de recherche:", error);
-        const tableBody = document.getElementById('restaurants-body');
-        tableBody.innerHTML = `<tr><td colspan="4">Erreur: ${error.message}</td></tr>`;
     }
 }
 
@@ -96,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const addButton = document.getElementById('add-button');
     addButton.addEventListener('click', addRestaurant);
     
-    const searchButton = document.getElementById('search-button');
+    const searchButton = document.getElementById('searchButton');
     searchButton.addEventListener('click', searchRestaurant);
 });
 
@@ -130,7 +147,7 @@ async function editRestaurant(id) {
 async function updateRestaurant(id) {
     const updatedRestaurant = {
         nom: document.getElementById('nom').value,
-        specialite: document.getElementById('specialite').value,
+        specialite: document.getElementById('specialite').value.split(','),
         adresse: document.getElementById('adresse').value,
         notation: parseFloat(document.getElementById('notation').value),
         tel: document.getElementById('tel').value,
@@ -141,7 +158,7 @@ async function updateRestaurant(id) {
     };
 
     try {
-        const response = await fetch(`http://localhost:3000/restaurants/id/${id}`, {
+        const response = await fetch(`http://localhost:3000/restaurants/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -150,7 +167,7 @@ async function updateRestaurant(id) {
         });
 
         if (response.ok) {
-            fetchRestaurants(); // Rafraîchir la liste
+            fetchRestaurants(); 
 
             // Réinitialiser le formulaire et le bouton
             document.getElementById('restaurant-form').reset();
@@ -171,7 +188,7 @@ async function deleteRestaurant(id) {
         });
 
         if (response.ok) {
-            fetchRestaurants(); // Rafraîchir la liste après suppression
+            fetchRestaurants(); 
         } else {
             console.error("Échec de la suppression du restaurant.");
         }

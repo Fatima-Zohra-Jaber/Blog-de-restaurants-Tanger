@@ -12,9 +12,9 @@ app.use(cors());
 app.use(express.json());
 
 // Charger les données JSON
-// let restaurants = require('./data.json'); // c'est just poure la lecture
+// let restaurants = require('./data.json'); // c'est just pour la lecture
 
-const data = fs.readFileSync('server/data.json'); // c'est just poure la lecture et l'écriture
+const data = fs.readFileSync('server/data.json'); // c'est pour la lecture et l'écriture
 let restaurants= JSON.parse(data);
 
 app.get('/', (req, res) => {
@@ -64,6 +64,7 @@ app.get('/restaurants/specialite/:specialite', (req, res) => {
     }
     res.json(result);
 });
+
 // // Ajouter un restaurant
 app.post('/restaurants', (req, res) => {
     const newRestaurant = {
