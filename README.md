@@ -35,7 +35,7 @@ Ce projet est une application web intuitive qui vous permet de découvrir les me
   - JSON for data storage
   - API REST pour la communication avec le frontend
 
-## Project Structure
+## Structure du projet
 ```
 Blog-de-restaurants-Tanger
 ├── backend
