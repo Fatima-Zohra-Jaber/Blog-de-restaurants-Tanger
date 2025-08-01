@@ -53,11 +53,6 @@ Blog-de-restaurants-Tanger
 │   │   ├── logo.png
 │   │   ├── hero.png
 │   │   ├── footer.png
-│   │   ├── screenshots
-│   │   │   ├── Home page.png
-│   │   │   ├── admin page.png
-│   │   │   ├── details page.png
-│   │   │   └── restaurants.png
 │   ├── js
 │   │   ├── admin.js
 │   │   ├── Restaurant.js
