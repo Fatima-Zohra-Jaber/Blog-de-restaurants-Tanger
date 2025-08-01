@@ -1,46 +1,105 @@
 # Blog-de-restaurants-Tanger
-## Contexte 
-La ville de Tanger est connue pour sa diversité culinaire, offrant une multitude de 
-restaurants proposant des spécialités locales et internationales. Cependant, il peut 
-être difficile pour les habitants et les visiteurs de découvrir facilement les meilleurs 
-endroits où manger. Ce projet vise à répondre à ce besoin en créant un blog interactif 
-et dynamique pour explorer les restaurants de Tanger. 
-## Scénario 
-Ce blog doit permettre aux utilisateurs de : 
-• Découvrir une liste de restaurants avec leurs informations principales. 
-• Filtrer ou rechercher des restaurants selon des critères comme le type de 
-cuisine, le nom de restaurant ou la note. 
-Le contenu des restaurants sera d’abord structuré dans un fichier JSON, que vous 
-utiliserez pour construire une API REST. Cette API alimentera ensuite le blog en 
-données. 
-Les restaurants doivent inclure des informations comme leur nom, leur adresse, leur 
-téléphone, leur adresse email, leur type de cuisine, une photo, une note moyenne, 
-le lien vers le site web (si le restaurant en dispose). 
-## Pages à créer 
-### 1. Page index.html : Liste des restaurants 
-• Cette page affiche tous les restaurants disponibles dans l’API sous forme de 
-cartes ; 
-• Chaque carte apparait avec : 
-o Image de couverture : image du restaurant 
-o Nom du restaurant 
-o Spécialité de cuisine 
-o Notation 
-o Un lien Détails qui mène vers la page restaurant.html 
-• Ajouter une barre de recherche permettant à l’utilisateur d’effectuer des 
-recherches par nom ou par spécialité ;  
-• Bonus : Ajouter une fonctionnalité de tri selon la notation et un filtre par type 
-de cuisine ; 
-### 2. Page restaurant.html : Détails d’un restaurant 
-Cette page doit illustrer tous les détails d’un restaurant ; 
-### 3. Page admin.html : Page administrateur 
-Et pour permettre une meilleure gestion de cette API, il est essentiel de prévoir une 
-page pour l’administrateur lui offrant des fonctionnalités Back-office : 
-• Afficher la liste des restaurants avec la possibilité de suppression ; 
-• Ajouter un nouveau restaurant ; 
-• Chercher un restaurant par nom ou spécialité ; 
-• Bonus : Modifier un restaurant ; 
-## Travail à rendre 
-• Données JSON structurées 
-• APIs :get /post/ delete 
-• Code source html, css, js 
-NB : Tester les APIs via un outil comme POSTMAN ;
+
+![Tanger Restaurant](screenshots/home.png)
+
+Ce projet est une application web intuitive qui vous permet de découvrir les meilleurs restaurants de la ville de Tanger. Grâce à une interface fluide et moderne, explorez une variété d'établissements, consultez leurs détails. L’application est développée avec un mélange de technologies front-end et back-end, garantissant une expérience utilisateur dynamique et réactive. 
+
+## Fonctionnalités
+
+- **Page d'accueil**: affiche l’ensemble des restaurants disponibles via l’API sous forme de cartes présentant leurs informations principales.
+- **Page de détails**: permet, après clic sur un restaurant, de consulter toutes ses informations détaillées (adresse, téléphone, e‑mail, site web, note, etc.).
+- **Page d’administration**: interface dédiée pour gérer les données des restaurants, offrant les fonctionnalités suivantes :
+  - **Ajouter un restaurant**: créer un nouveau restaurant avec son nom, son adresse et tous ses détails.
+  - **Modifier un restaurant**: mettre à jour les informations d'un restaurant existant.
+  - **Supprimer un restaurant**: retirer un restaurant de la liste.
+- **Barre de recherche**: filtre et recherche les restaurants selon leur nom ou leur spécialité, facilitant la navigation dans la liste.
+
+## Screenshots
+
+### Restaurant's Page
+![Page d'accueil](screenshots/restaurants.png)
+
+### Page de détails
+![Page des détails](screenshots/details.png)
+
+### Page Admin
+![Page administrateur](screenshots/admin.png)
+
+## Technologies utilisées
+- **Frontend**:
+  - HTML
+  - CSS
+  - JavaScript
+- **Backend**:
+  - Node.js
+  - JSON for data storage
+  - API REST pour la communication avec le frontend
+
+## Project Structure
+```
+Blog-de-restaurants-Tanger
+├── backend
+│   ├── data.json
+│   ├── node_modules
+│   ├── package-lock.json
+│   ├── package.json
+│   └── server.js
+├── frontend
+│   ├── css
+│   │   ├── admin.css
+│   │   └── restaurant.css
+│   │   └── style.css
+│   ├── images
+│   │   ├── logo.png
+│   │   ├── hero.png
+│   │   ├── footer.png
+│   │   ├── screenshots
+│   │   │   ├── Home page.png
+│   │   │   ├── admin page.png
+│   │   │   ├── details page.png
+│   │   │   └── restaurants.png
+│   ├── js
+│   │   ├── admin.js
+│   │   ├── Restaurant.js
+│   │   └── script.js
+│   ├── admin.html
+│   ├── index.html
+│   └── restaurant.html
+└── README.md
+```
+
+## Instructions d’installation
+
+1. **Cloner le dépôt GitHub**:
+   ```bash
+   git clone https://github.com/Fatima-Zohra-Jaber/Blog-de-restaurants-Tanger.git
+   ```
+
+2. **Se rendre dans le répertoire du projet**:
+   ```bash
+   cd Blog-de-restaurants-Tanger
+   ```
+
+3. **Installer les dépendances**:
+   Placez-vous dans le dossier `backend` et exécutez:
+   ```bash
+   npm install
+   ```
+
+4. **Démarrer le serveur**:
+   ```bash
+   node server.js
+   ```
+
+5. **Lancer l’application**:
+    Ouvrez `index.html` dans votre navigateur pour explorer le frontend.
+    
+
+## Améliorations futures
+- Ajouter une base de données pour un stockage de données plus évolutif.
+- Mettre en œuvre l’authentification des utilisateurs.
+- Enrichir le panneau d’administration avec des fonctionnalités avancées.
+- Optimiser l’interface pour les appareils mobiles.
+
+
+

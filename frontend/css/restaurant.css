@@ -1,10 +1,13 @@
+header{
+    background-color: #484242;
+}
 /* Style pour la page de détails */
 .restaurantDetail {
     position: relative;
     max-width: 1400px;
     margin: 0 auto;
     min-height: 100vh;
-    background: #fff;
+    background: #f5f5f5;
 }
 
 /* Style pour l'image */
@@ -28,38 +31,38 @@
     left: 0;
     width: 100%;
     height: 80px;
-    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 1));
+    background: linear-gradient(to bottom, transparent, rgb(245, 245, 245));
 }
 
 .textDetail {
     width: 90%;
-    max-width: 800px; /* Limiter la largeur pour un meilleur rendu */
+    max-width: 800px; 
     margin: -100px auto 50px;
     padding: 40px;
     background: white;
-    border-radius: 15px; /* Coins arrondis */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
     position: relative;
     z-index: 2;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ajout d'une transition */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .textDetail:hover {
-    transform: translateY(-5px); /* Effet de survol */
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
+    transform: translateY(-5px); 
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); 
 }
 
 .textDetail h1 {
-    font-size: 2.5rem; /* Taille de police plus grande */
-    color: var(--primary-color); /* Utiliser une couleur primaire */
+    font-size: 2.5rem; 
+    color: var(--primary-color);
     margin-bottom: 20px;
-    font-weight: 700; /* Poids de police plus audacieux */
+    font-weight: 700;
 }
 
 .textDetail p {
-    margin: 15px 0; /* Espacement uniforme entre les paragraphes */
-    line-height: 1.6; /* Meilleure lisibilité */
-    color: var(--second-text); /* Couleur secondaire pour le texte */
+    margin: 15px 0; 
+    line-height: 1.6; 
+    color: var(--second-text);
 }
 
 .specialite-container {
@@ -114,4 +117,11 @@ i{
     margin-right: 10px;
     color: var(--primary-color);
     font-size: 1.5rem;
+}
+
+.mapDetail {
+    width: 100%;
+    height: 400px;
+    max-width:800px;
+    margin:30px auto 0;
 }

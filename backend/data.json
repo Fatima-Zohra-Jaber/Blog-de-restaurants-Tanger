@@ -1,0 +1,220 @@
+[
+  {
+    "id": 1,
+    "nom": "Crumby",
+    "specialite": [
+      "Internationale",
+      "Fusion"
+    ],
+    "adresse": "Boulevard Mohamed VI, Tangier",
+    "notation": 4.8,
+    "avis": [
+      "Service rapide et chaleureux",
+      "Plats innovants et délicieux",
+      "Ambiance moderne"
+    ],
+    "tel": "+212 5393-34973",
+    "email": "imad@Crumby.ma",
+    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.67139009076!2d-5.822982624697087!3d35.78344762435299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0c7953368a0387%3A0x8c45bb741feebf9e!2sCrumby!5e0!3m2!1sen!2sma!4v1734785317553!5m2!1sen!2sma",
+    "photo": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/4c/47/6d/located-not-far-from.jpg?w=900&h=500&s=1"
+  },
+  {
+    "id": 2,
+    "nom": "Le Mirage",
+    "specialite": [
+      "Fruits de mer de luxe"
+    ],
+    "adresse": "Route de Cap Spartel, Tangier",
+    "notation": 4.1,
+    "avis": [
+      "Vue imprenable sur l’océan",
+      "Fruits de mer frais et savoureux"
+    ],
+    "tel": "+212 5393-12345",
+    "email": "info@lemirage.ma",
+    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.494134468515!2d-5.8660541!3d35.7878007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0c79e9566c04ab%3A0x47d83f619cc50a20!2sCaf%C3%A9%20Le%20Mirage!5e0!3m2!1sen!2sma!4v1734785059004!5m2!1sen!2sma",
+    "photo": "https://fastly.4sqi.net/img/general/600x600/464886155_EZ_eOEe-jRtQE1oZA_89D8qp4yDYpUeKq09rJmTqg80.jpg"
+  },
+  {
+    "id": 3,
+    "nom": "El Tangerino",
+    "specialite": [
+      "Espagnole",
+      "Fruits de mer"
+    ],
+    "adresse": "Boulevard Mohamed VI, Tangier",
+    "notation": 4.1,
+    "avis": [
+      "Tapas variés et savoureux",
+      "Ambiance espagnole conviviale"
+    ],
+    "tel": "+212 5393-56789",
+    "email": "contact@eltangerino.com",
+    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.9228841607896!2d-5.798589499999999!3d35.7772706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0c7f58c944478f%3A0x4d91410ed8a18814!2sEl%20Tangerino!5e0!3m2!1sen!2sma!4v1734941445098!5m2!1sen!2sma",
+    "photo": "https://teratlas.ma/wp-content/uploads/2023/12/ff38b43079494ae79adae3b5ad347f4e.jpg"
+  },
+  {
+    "id": 4,
+    "nom": "Le Nabab",
+    "specialite": [
+      "Marocaine",
+      "Gastronomique"
+    ],
+    "adresse": "Place de la Kasbah, Tangier",
+    "notation": 4.1,
+    "avis": [
+      "Décor somptueux",
+      "Cuisine raffinée"
+    ],
+    "tel": "+212 5393-67890",
+    "email": "contact@lenabab.com",
+    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.5045052899486!2d-5.813870424082164!3d35.78754602412644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0c7f4da3b7c5f9%3A0x45802df1ea145ebb!2sLe%20Nabab!5e0!3m2!1sen!2sma!4v1734941499402!5m2!1sen!2sma",
+    "photo": "https://img.restaurantguru.com/c2ed-Le-Nabab-Tangier-view.jpg"
+  },
+  {
+    "id": 5,
+    "nom": "Cappuccino",
+    "specialite": [
+      "Marocaine",
+      "Desserts",
+      "Café"
+    ],
+    "adresse": "Malabata, Tangier",
+    "notation": 4,
+    "avis": [
+      "Desserts divers et délicieux",
+      "Café de qualité"
+    ],
+    "tel": "+212 5393-78901",
+    "email": "cappuccino@ma",
+    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.659882100643!2d-5.766137714088105!3d35.78373025358416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0c7f8f599d9c79%3A0x4eabac8811b3dc51!2sCappuccino!5e0!3m2!1sen!2sma!4v1734941567426!5m2!1sen!2sma",
+    "photo": "https://media-cdn.tripadvisor.com/media/photo-s/09/f5/f2/33/cefe-cappuccino.jpg"
+  },
+  {
+    "id": 6,
+    "nom": "Café Hafa",
+    "specialite": [
+      "Marocaine",
+      "Thé",
+      "Snacks"
+    ],
+    "adresse": "Quartier Marshan, Tangier",
+    "notation": 3.9,
+    "avis": [
+      "Thé à la menthe incontournable",
+      "Vue panoramique sur la baie"
+    ],
+    "tel": "+212 5393-89012",
+    "email": "info@cafehafa.com",
+    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.347561299417!2d-5.824428924081982!3d35.79139992391396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0c78b6d7a530cd%3A0xa3cf4c731aed4b79!2sCaf%C3%A9%20Hafa!5e0!3m2!1sen!2sma!4v1734941616318!5m2!1sen!2sma",
+    "photo": "https://www.tanger-experience.com/wp-content/uploads/2023/04/whahington-Poste-Cafe-Hafa-7541-750x350.jpg"
+  },
+  {
+    "id": 7,
+    "nom": "RR-Ice",
+    "specialite": [
+      "Marocaine",
+      "Glaces",
+      "Café"
+    ],
+    "adresse": "Corniche de Tanger, Tangier",
+    "notation": 4.1,
+    "avis": [
+      "Glaces artisanales délicieuses",
+      "Endroit idéal pour une pause gourmande"
+    ],
+    "tel": "+212 5393-90123",
+    "email": "rrice@ma",
+    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.474065677699!2d-5.762532924082095!3d35.78829352408506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0c7f8fe148635f%3A0x8816194918aabe7a!2sRR%20Ice!5e0!3m2!1sen!2sma!4v1734942098889!5m2!1sen!2sma",
+    "photo": "https://pbs.twimg.com/media/Ea3ttG2XQAA6TW0?format=jpg&name=small"
+  },
+  {
+    "id": 8,
+    "nom": "Villa Josephine",
+    "specialite": [
+      "Marocaine",
+      "Pâtisserie"
+    ],
+    "adresse": "Mountain of Tangier",
+    "notation": 4.4,
+    "avis": [
+      "Lieu historique et charmant",
+      "Thé raffiné et pâtisseries maison"
+    ],
+    "tel": "+212 5393-12345",
+    "email": "villa_josephine@ma",
+    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.236805145442!2d-5.842393424081875!3d35.79411942376428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0c78bfb09c7051%3A0xfbe21637c143c0a3!2sVilla%20Josephine!5e0!3m2!1sen!2sma!4v1734942169948!5m2!1sen!2sma",
+    "photo": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/25/e7/5b/57/caption.jpg?w=1200&h=-1&s=1"
+  },
+  {
+    "id": 9,
+    "nom": "Omega-3",
+    "specialite": [
+      "Fruits de mer",
+      "Méditerranéenne"
+    ],
+    "adresse": "Av. des Gironfliers, Tangier 90100 Morocco",
+    "notation": 4.3,
+    "avis": [
+      "Produits frais et sains",
+      "Menu varié pour tous les goûts"
+    ],
+    "tel": "+212 662-165644",
+    "email": "contact@omega3tanger.com",
+    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3237.661384226952!2d-5.840100974083229!3d35.75912672569091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b8769a3eb5cf5%3A0xea89828fe0bd9763!2sOmega%203%20Restaurant!5e0!3m2!1sen!2sma!4v1734942271627!5m2!1sen!2sma",
+    "photo": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/1f/e8/c5/welcome.jpg?w=900&h=500&s=1"
+  },
+  {
+    "id": 10,
+    "nom": "La Véranda",
+    "specialite": [
+      "internationale",
+      "Buffet"
+    ],
+    "adresse": "Rue de la Plage, Tangier",
+    "notation": 4.2,
+    "avis": [
+      "Buffet varié et copieux",
+      "Personnel accueillant"
+    ],
+    "tel": "+212 5393-45678",
+    "email": "verandalounge@ma",
+    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.9716099116017!2d-5.787354124082561!3d35.77607372475799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b809d13b509f3%3A0x1b68fd71480af447!2sLa%20Veranda!5e0!3m2!1sen!2sma!4v1734942308569!5m2!1sen!2sma",
+    "photo": "https://lh3.googleusercontent.com/p/AF1QipOOL-QP1_0Uz0hHtajytCoRLO_EJKf1A1hMQH0S=s680-w680-h510"
+  },
+  {
+    "id": 11,
+    "nom": "Barcelo Café",
+    "specialite": [
+      "Café",
+      "Pâtisserie"
+    ],
+    "adresse": "Hôtel Barcelo, Tangier",
+    "notation": 4.2,
+    "avis": [
+      "Pâtisseries fraîches chaque jour",
+      "Endroit calme pour se détendre"
+    ],
+    "tel": "+212 5393-56789",
+    "email": "barcelocafe@ma",
+    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12949.644851389088!2d-5.822978990019972!3d35.76527396660532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b80a4edbb3f6b%3A0xfb49fad00d098f5c!2sBarcel%C3%B3%20Tanger!5e0!3m2!1sen!2sma!4v1734942389664!5m2!1sen!2sma",
+    "photo": "https://static.logitravel.com/cloudcontent/fotos/agregadorHotelero/0002/18742/218742/13.jpg?f=17151287"
+  },
+  {
+    "id": 12,
+    "nom": "Anna & Paolo",
+    "specialite": [
+      "Italienne"
+    ],
+    "adresse": "Quartier Malabata, Tangier",
+    "notation": 4.2,
+    "avis": [
+      "Pâtes maison délicieuses",
+      "Ambiance familiale"
+    ],
+    "tel": "+212 5393-34567",
+    "email": "anna.paolo@ma",
+    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.929095702093!2d-5.813909324697338!3d35.77711802470137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0c7f5513391acd%3A0xe8a8204870aef0bf!2sAnna%20e%20Paolo!5e0!3m2!1sen!2sma!4v1734785549112!5m2!1sen!2sma",
+    "photo": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/90/29/0a/photo3jpg.jpg?w=900&h=500&s=1"
+  }
+]

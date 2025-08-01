@@ -13,8 +13,7 @@ app.use(express.json());
 
 // Charger les données JSON
 // let restaurants = require('./data.json'); // c'est just pour la lecture
-
-const data = fs.readFileSync('server/data.json'); // c'est pour la lecture et l'écriture
+const data = fs.readFileSync('./data.json'); // c'est pour la lecture et l'écriture
 let restaurants= JSON.parse(data);
 
 app.get('/', (req, res) => {
@@ -80,7 +79,7 @@ app.post('/restaurants', (req, res) => {
     };
 
     restaurants.push(newRestaurant);
-    fs.writeFileSync('server/data.json', JSON.stringify(restaurants, null, 2));
+    fs.writeFileSync('./data.json', JSON.stringify(restaurants, null, 2));
     res.status(201).json(newRestaurant);
     
 });
@@ -99,7 +98,7 @@ app.put('/restaurants/:id', (req, res) => {
     restaurant.site = req.body.site || restaurant.site;
     restaurant.tel = req.body.tel || restaurant.tel;
 
-    fs.writeFileSync( 'server/data.json', JSON.stringify(restaurants, null, 2));
+    fs.writeFileSync( './data.json', JSON.stringify(restaurants, null, 2));
     res.json(restaurant);
 });
 
@@ -110,7 +109,7 @@ app.delete('/restaurants/:id', (req, res) => {
     if (index === -1) return res.status(404).send('Restaurant non trouvé');
 
     restaurants.splice(index, 1);
-    fs.writeFileSync('server/data.json', JSON.stringify(restaurants, null, 2));
+    fs.writeFileSync('./data.json', JSON.stringify(restaurants, null, 2));
     res.sendStatus(204); // res.status(204).send();
 });
 

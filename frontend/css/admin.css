@@ -1,4 +1,6 @@
-
+header{
+    background-color: #484242;
+}
 /* Main Container */
 main {
     padding: 2rem;
@@ -104,7 +106,7 @@ table {
 th, td {
     padding: 0.75rem;
     text-align: left;
-    border-bottom: 1px solid #eee;
+    border-bottom: 2px solid #eee;
 }
 
 th {
@@ -122,7 +124,7 @@ td img {
 
 /* Action Buttons */
 td button {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.75rem;
     margin: 0 0.25rem;
     border: none;
     border-radius: 4px;

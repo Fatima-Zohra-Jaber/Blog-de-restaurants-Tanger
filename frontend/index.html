@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/logo2.png">
+    <title>Restaurant Tanger</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    
+    <section class="hero">
+        <header>
+            <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="logo">
+            </a> 
+            </div>
+            <nav>
+                <a href="index.html">Accueil</a>
+                <a href="#restaurants">Restaurants</a>
+                <a href="#footer">Contact</a>
+            </nav>
+            <div id="search">
+                <select name="type" id="typeSearch">
+                    <option value="">Selectionez une option</option>
+                    <option value="nom">Nom</option>
+                    <option value="specialite">Spécialité</option>
+                </select>
+                <input type="text" id="input" placeholder="Recherche par nom ou spécialité">
+                <button id="searchButton"> <i class="fa-solid fa-magnifying-glass"></i> </button>
+                <button onclick="window.location.href='admin.html'"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </header>
+        <div class="hero-content">
+            <h1>Découvrez les meilleurs restaurants de Tanger</h1>
+            <p> 
+                Explorez la scène gastronomique riche et dynamique de Tanger, où </br>
+                la cuisine marocaine traditionnelle rencontre la gastronomie moderne.
+            </p>
+        </div>
+    </section>
+    <main>
+        <h2 id="title">La liste des restaurants</h2>
+        <section id="restaurants">
+            <!-- Chargez les restaurants en utilisant JavaScript  -->
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <img src="images/logo.png" alt="logo">
+                <p>
+                    Restaurant Tanger est un site web </br>
+                    qui vous permet de découvrir les </br>
+                    meilleurs restaurants de Tanger.
+                </p>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contactez-nous</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Tanger, Moroc</p>
+                <p><i class="fas fa-envelope"></i> info@tangerrestaurants.com</p>
+                <p><i class="fas fa-phone"></i> +212 5XX XX XX XX</p>
+            </div>
+            <div class="footer-section social">
+                <h3>Suivez-nous</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Tanger Restaurant. Tous droits réservés.</p>
+        <script>
+            document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
+
+        </div>
+    </footer>
+
+    <Script type="module" src="js/script.js" ></Script>
+</body>
+</html>

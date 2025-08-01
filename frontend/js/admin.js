@@ -59,9 +59,11 @@ function displayRestaurants(restaurants) {
         const row = document.createElement('tr');
         row.innerHTML = `
             <td><img src="${restaurant.photo}" alt="${restaurant.nom}" ></td>
+            <td>${restaurant.id}</td>
             <td>${restaurant.nom}</td>
             <td>${restaurant.specialite}</td>
             <td>${restaurant.notation}</td>
+            <td>${restaurant.tel}</td>
             <td>
                 <button onclick="window.location.href='restaurant.html?id=${restaurant.id}'">
                 <i class="fa-regular fa-eye"></i></button>
@@ -135,6 +137,8 @@ async function editRestaurant(id) {
         document.getElementById('avis').value = restaurant.avis.join(',');
 
         // Modifier le bouton pour "Mettre à jour"
+        const addTitle = document.getElementById('add-title');
+        addTitle.textContent = 'Modifier Restaurant';
         const addButton = document.getElementById('add-button');
         addButton.textContent = 'Mettre à jour';
         addButton.onclick = () => updateRestaurant(id);
@@ -171,6 +175,8 @@ async function updateRestaurant(id) {
 
             // Réinitialiser le formulaire et le bouton
             document.getElementById('restaurant-form').reset();
+            const addTitle = document.getElementById('add-title');
+            addTitle.textContent = 'Ajouter Restaurant';
             const addButton = document.getElementById('add-button');
             addButton.textContent = 'Ajouter Restaurant';
             addButton.onclick = addRestaurant;

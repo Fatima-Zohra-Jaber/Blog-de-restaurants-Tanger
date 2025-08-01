@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/logo2.png">
+    <title>Détails Restaurant</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/restaurant.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+        <a href="index.html">
+            <img src="images/logo.png" alt="logo">
+        </a> 
+        </div>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="index.html#restaurants">Restaurants</a>
+            <a href="#footer">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <div class="restaurantDetail">
+            <div class="imageDetail">
+                <!-- L'image du restaurant sera injectée par JS -->
+            </div>
+            <div class="textDetail">
+                <!-- Les infos du restaurant seront injectées par JS -->
+            </div>
+            <div class="mapDetail">
+                <h3>Localisation</h3>
+                <!-- La carte Google Maps sera injectée ici par JS -->
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <img src="images/logo.png" alt="logo">
+                <p>
+                    Restaurant Tanger est un site web </br>
+                    qui vous permet de découvrir les </br>
+                    meilleurs restaurants de Tanger.
+                </p>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contactez-nous</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Tanger, Moroc</p>
+                <p><i class="fas fa-envelope"></i> info@tangerrestaurants.com</p>
+                <p><i class="fas fa-phone"></i> +212 5XX XX XX XX</p>
+            </div>
+            <div class="footer-section social">
+                <h3>Suivez-nous</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Tanger Restaurant. Tous droits réservés.</p>
+        <script>
+            document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
+
+        </div>
+    </footer>
+    <script   type="module" src="js/restaurant.js" ></script>
+</body>
+</html>

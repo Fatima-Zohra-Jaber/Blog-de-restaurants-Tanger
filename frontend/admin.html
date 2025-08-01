@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/logo2.png">
     <title>Administration des Restaurants</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/admin.css">
@@ -15,11 +16,11 @@
         </div>
         <div id="search">
             <select name="type" id="typeSearch">
-                <option value="">Select</option>
+                <option value="">Selectionez une option</option>
                 <option value="nom">Nom</option>
                 <option value="specialite">Spécialité</option>
             </select>
-            <input type="text" id="input" placeholder="Nom du restaurant">
+            <input type="text" id="input" placeholder="Recherche par nom ou spécialité">
             <button id="searchButton"> <i class="fa-solid fa-magnifying-glass"></i> </button>
             <button onclick="window.location.href='admin.html'"><i class="fa-solid fa-bars"></i></button>
         </div>
@@ -27,7 +28,7 @@
     
     <main>
         <section id="add-restaurant">
-            <h2>Ajouter un Restaurant</h2>
+            <h2 id="add-title">Ajouter un Restaurant</h2>
             <form id="restaurant-form">
                 <input type="text" id="nom" placeholder="Nom du restaurant" >
                 <input type="text" id="specialite" placeholder="Spécialité" >
@@ -48,9 +49,11 @@
                 <thead>
                     <tr>
                         <th>Photo</th>
+                        <th>Id</th>
                         <th>Nom</th>
                         <th>Spécialité</th>
                         <th>Notation</th>
+                        <th>Téléphone</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
