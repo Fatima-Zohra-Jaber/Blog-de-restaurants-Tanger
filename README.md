@@ -14,9 +14,9 @@ Ce projet est une application web intuitive qui vous permet de découvrir les me
   - **Supprimer un restaurant**: retirer un restaurant de la liste.
 - **Barre de recherche**: filtre et recherche les restaurants selon leur nom ou leur spécialité, facilitant la navigation dans la liste.
 
-## Screenshots
+## Capture d'écran
 
-### Restaurant's Page
+### Liste des restaurants
 ![Page d'accueil](screenshots/restaurants.png)
 
 ### Page de détails
