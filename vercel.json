@@ -15,7 +15,7 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/restaurants/(.*)",
       "dest": "backend/server.js",
       "headers": {
         "Content-Type": "application/json"
