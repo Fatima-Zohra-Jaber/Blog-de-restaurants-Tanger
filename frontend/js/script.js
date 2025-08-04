@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Fonction pour récupérer les données de l'API
 async function fetchRestaurants() {
     try {
-        const response = await fetch("http://localhost:3000/restaurants"); 
+        const response = await fetch("/restaurants"); 
         const data = await response.json(); 
         if (data.length === 0) {
             restaurantsElement.innerHTML ='<div class="notFound">Aucun restaurant trouvé</div>';
