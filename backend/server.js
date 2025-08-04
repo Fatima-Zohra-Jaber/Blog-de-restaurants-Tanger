@@ -28,10 +28,10 @@ app.get('/', (req, res) => {
     res.send(message);
 });
 
-// Lancer le serveur
-app.listen(PORT, () => {
-    console.log(`Serveur lancé sur http://localhost:${PORT}`);
-});
+// // Lancer le serveur
+// app.listen(PORT, () => {
+//     console.log(`Serveur lancé sur http://localhost:${PORT}`);
+// });
 
 // // Récupérer tous les restaurants
 app.get('/restaurants', (req, res) => {
@@ -120,3 +120,4 @@ app.delete('/restaurants/:id', (req, res) => {
     res.sendStatus(204); // res.status(204).send();
 });
 
+module.exports = app;
