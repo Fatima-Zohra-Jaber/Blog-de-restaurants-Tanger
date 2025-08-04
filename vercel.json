@@ -1,3 +1,4 @@
+
 {
   "version": 2,
   "builds": [
@@ -15,7 +16,7 @@
   ],
   "routes": [
     {
-      "src": "/restaurants/(.*)",
+      "src": "/api/(.*)",
       "dest": "backend/server.js",
       "headers": {
         "Content-Type": "application/json"
