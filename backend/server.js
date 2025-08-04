@@ -34,20 +34,20 @@ app.get('/', (req, res) => {
 // });
 
 // // Récupérer tous les restaurants
-app.get('/restaurants', (req, res) => {
+app.get('/api/restaurants', (req, res) => {
     res.json(restaurants);
 });
 
 
 // Récupérer un restaurant par id
-app.get('/restaurants/id/:id', (req, res) => {
+app.get('/api/restaurants/id/:id', (req, res) => {
     const restaurant = restaurants.find(r => r.id === parseInt(req.params.id));
     if (!restaurant) return res.status(404).send('Restaurant non trouvé');
     res.json(restaurant);
 });
 
 // Récupérer un restaurant par nom
-app.get('/restaurants/nom/:nom', (req, res) => {
+app.get('/api/restaurants/nom/:nom', (req, res) => {
     const result = restaurants.filter(r =>
  r.nom.toLowerCase().includes(req.params.nom.toLowerCase()));
     if (result.length === 0) {
@@ -58,7 +58,7 @@ app.get('/restaurants/nom/:nom', (req, res) => {
 
 
 // Récupérer un restaurant par spécialité
-app.get('/restaurants/specialite/:specialite', (req, res) => {
+app.get('/api/restaurants/specialite/:specialite', (req, res) => {
     const result = restaurants.filter(restaurant => 
         restaurant.specialite.some(spec => 
             spec.toLowerCase().includes(req.params.specialite.toLowerCase())
@@ -72,7 +72,7 @@ app.get('/restaurants/specialite/:specialite', (req, res) => {
 });
 
 // // Ajouter un restaurant
-app.post('/restaurants', (req, res) => {
+app.post('/api/restaurants', (req, res) => {
     const newRestaurant = {
         id: restaurants.length + 1,
         nom: req.body.nom,
@@ -92,7 +92,7 @@ app.post('/restaurants', (req, res) => {
 });
 
 // // Modifier un restaurant
-app.put('/restaurants/:id', (req, res) => {
+app.put('/api/restaurants/:id', (req, res) => {
     const restaurant = restaurants.find(r => r.id === parseInt(req.params.id)); 
     if (!restaurant) return res.status(404).send('Restaurant non trouvé');
 
@@ -111,7 +111,7 @@ app.put('/restaurants/:id', (req, res) => {
 
 
 // // Supprimer un restaurant
-app.delete('/restaurants/:id', (req, res) => {
+app.delete('/api/restaurants/:id', (req, res) => {
     const index = restaurants.findIndex(r => r.id === parseInt(req.params.id));
     if (index === -1) return res.status(404).send('Restaurant non trouvé');
 
