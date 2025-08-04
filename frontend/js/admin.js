@@ -1,7 +1,7 @@
 // Fonction pour récupérer tous les restaurants
 async function fetchRestaurants() {
     try {
-        const response = await fetch("http://localhost:3000/restaurants");
+        const response = await fetch("/api/restaurants");
         const data = await response.json();
         displayRestaurants(data);
     } catch (error) {
@@ -92,7 +92,7 @@ async function addRestaurant() {
     };
 
     try {
-        const response = await fetch('http://localhost:3000/restaurants', {
+        const response = await fetch('/api/restaurants', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
 async function editRestaurant(id) {
     try {
         // Récupérer les informations du restaurant à modifier
-        const response = await fetch(`http://localhost:3000/restaurants/id/${id}`);
+        const response = await fetch(`/api/restaurants/id/${id}`);
         const restaurant = await response.json();
 
         // Pré-remplir le formulaire avec les informations existantes
@@ -162,7 +162,7 @@ async function updateRestaurant(id) {
     };
 
     try {
-        const response = await fetch(`http://localhost:3000/restaurants/${id}`, {
+        const response = await fetch(`/api/restaurants/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -189,7 +189,7 @@ async function updateRestaurant(id) {
 
 async function deleteRestaurant(id) {
     try {
-        const response = await fetch(`http://localhost:3000/restaurants/${id}`, {
+        const response = await fetch(`/api/restaurants/${id}`, {
             method: 'DELETE'
         });
 
