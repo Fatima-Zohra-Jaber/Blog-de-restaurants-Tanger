@@ -5,8 +5,15 @@ const app = express();
 const fs = require('fs');// Importer le module file system
 const PORT = 3000;
 
+app.options('*', (req, res) => res.sendStatus(200)); // OPTIONS
+
 // Activer CORS
-app.use(cors());
+app.use(cors({
+  origin: 'https://blog-de-restaurants-tanger-q27t.vercel.app', 
+  methods: ['GET','POST','PUT','DELETE','OPTIONS'],
+  allowedHeaders: ['Content-Type','Authorization'],
+  credentials: true
+}));
 
 // Middleware JSON
 app.use(express.json());
