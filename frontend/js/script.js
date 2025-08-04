@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Fonction pour récupérer les données de l'API
 async function fetchRestaurants() {
     try {
-        const response = await fetch("/restaurants"); 
+        const response = await fetch("/api/restaurants"); 
         const data = await response.json(); 
         if (data.length === 0) {
             restaurantsElement.innerHTML ='<div class="notFound">Aucun restaurant trouvé</div>';
@@ -83,9 +83,9 @@ return `
         return;
     }
     if (typeSearch === "nom") {
-        url = `http://localhost:3000/restaurants/nom/${encodeURIComponent(input)}`;
+        url = `/api/restaurants/nom/${encodeURIComponent(input)}`;
     }else if(typeSearch === "specialite"){
-        url= `http://localhost:3000/restaurants/specialite/${encodeURIComponent(input)}`;
+        url= `/api/restaurants/specialite/${encodeURIComponent(input)}`;
     }
     try {
         const response = await fetch(url);
