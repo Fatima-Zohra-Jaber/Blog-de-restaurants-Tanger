@@ -5,7 +5,7 @@ async function fetchRestaurant() {
     const idRestaurant = urlParams.get('id');
 
     try {
-        const response = await fetch(`http://localhost:3000/restaurants/id/${idRestaurant}`);
+        const response = await fetch(`restaurants/id/${idRestaurant}`);
         if (!response.ok) {
             throw new Error('Restaurant non trouvé');
         }
