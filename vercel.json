@@ -55,7 +55,7 @@
       }
     },
     {
-      "src": "/(.*)",
+      "src": "^(?!api/).*$",
       "dest": "frontend/index.html",
       "headers": {
         "Content-Type": "text/html"

@@ -1,4 +1,3 @@
-
 const restaurantsElement = document.getElementById("restaurants");
 
 document.addEventListener('DOMContentLoaded', () => {
