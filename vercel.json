@@ -1,4 +1,3 @@
-
 {
   "version": 2,
   "builds": [
@@ -17,7 +16,7 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "backend/server.js",
+      "dest": "backend/api/index.js",
       "headers": {
         "Content-Type": "application/json"
       }
